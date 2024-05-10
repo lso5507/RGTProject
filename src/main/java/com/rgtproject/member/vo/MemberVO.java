@@ -10,8 +10,19 @@ import lombok.RequiredArgsConstructor;
 @AllArgsConstructor
 public class MemberVO {
 	private String userId;
+	private Long id;
+	public MemberVO(){
+
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
 	public MemberVO(Member member){
 		this.userId=member.getUserId();
-
+	}
+	public MemberVO(String userId){
+		this.userId=userId;
 	}
 }

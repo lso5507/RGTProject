@@ -54,6 +54,13 @@ public class MemberServiceImpl implements MemberService{
 		return new ResponseMemberDto(tokenInfo.getAccessToken(), HttpStatus.OK.value());
 	}
 
+	@Override
+	public Long selectId(String memberId) {
+		Member rstMember = memberRepository.findByUserId(memberId);
+		Assert.notNull(rstMember,"###Member_userIdRequired###");
+		return rstMember.getId();
+	}
+
 	private TokenInfo tokenGenerate(Member rstMember) {
 		return jwtProvider.generateToken(new MemberVO(rstMember));
 	}

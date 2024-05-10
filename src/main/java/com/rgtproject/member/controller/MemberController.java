@@ -48,8 +48,7 @@ public class MemberController {
 		ResponseMemberDto responseMemberDto = memberService.memberSignup(dto);
 		return ResponseEntity.ok().body(responseMemberDto);
 	}
-	@Operation(security = {
-		@SecurityRequirement(name = "JWT")},
+	@Operation(
 		summary = "로그인", description = "로그인 기능구현", responses = {
 		@ApiResponse(responseCode = "200", description = "성공",content = @Content(schema = @Schema(implementation = ResponseMemberDto.class))),
 		@ApiResponse(responseCode = "401", description = "로그인 실패",content = @Content(schema = @Schema(implementation = ErrorResponse.class))),
