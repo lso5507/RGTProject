@@ -2,6 +2,9 @@
 spring:
   profiles:
     active: local
+jwt:
+  secret: cc404a35a941a44e4f68e0ba189d8f4d7e4b77a69eaca34de5c81488142fecd0d8d189de28e18487cc0ff841afb0c71d4ffde7cda15007baaf530c169435c2a7
+
 ---
 spring:
   config:
