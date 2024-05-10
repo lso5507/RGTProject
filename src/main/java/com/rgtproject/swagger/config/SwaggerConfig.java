@@ -16,7 +16,7 @@ import io.swagger.v3.oas.models.security.SecurityScheme;
 import io.swagger.v3.oas.models.servers.Server;
 
 @OpenAPIDefinition(
-	info = @Info(title = "더커머스 API",
+	info = @Info(title = "알지티 API",
 		description = "알맞는 명세서를 선택하세요.",
 		version = "v1"))
 @Configuration
@@ -29,6 +29,13 @@ public class SwaggerConfig {
 		return GroupedOpenApi.builder()
 			.group("사용자API")
 			.packagesToScan("com.rgtproject.member.controller.MemberController")
+			.build();
+	}
+	@Bean
+	public GroupedOpenApi OrderGroup() {
+		return GroupedOpenApi.builder()
+			.group("주문API")
+			.packagesToScan("com.rgtproject.order.controller.OrderController")
 			.build();
 	}
 
