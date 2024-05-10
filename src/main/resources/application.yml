@@ -1,4 +1,15 @@
 # default
+springdoc:
+  api-docs:
+    enabled: true
+  swagger-ui:
+    path: /swagger-ui/index.html
+    groups-order: DESC
+    doc-expansion: none
+    tags-sorter: alpha
+    operationsSorter: method
+    disable-swagger-default-url: true
+    display-request-duration: true
 spring:
   profiles:
     active: local
@@ -11,4 +22,11 @@ spring:
     activate:
       on-profile: local
     import: classpath:/application_local.yml
+---
+---
+spring:
+  config:
+    activate:
+      on-profile: dev
+    import: classpath:/application_dev.yml
 ---

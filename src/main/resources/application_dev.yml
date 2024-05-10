@@ -1,6 +1,9 @@
+springdoc:
+  swagger-ui:
+    use-root-path: true
 server.port: 9000
 domain:
-  name: http://127.0.0.1:${server.port}
+  name: http://144.24.65.52:${server.port}
 spring:
   jpa:
     hibernate:
