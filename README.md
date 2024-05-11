@@ -20,3 +20,7 @@
 
 ### API 
 https://documenter.getpostman.com/view/17138066/2sA3JM6M8b
+
+
+### Server
+http://144.24.65.52:8211/swagger-ui/index.html
